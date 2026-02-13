@@ -2,7 +2,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { GoogleGenAI } from '@google/genai';
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+
 
 interface Message {
   role: 'user' | 'assistant';
